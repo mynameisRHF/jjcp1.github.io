@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>九机图片规范</title>
+		<link rel="stylesheet" href="lib/layui-v2.5.6/layui-v2.5.6/layui/css/layui.css" media="all">
+		<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+		<style>
+			body{
+				    background-color: #f2f2f2;
+			}
+			.layui-table,
+			.layui-table-view {
+				margin: 0px;
+			}
+
+			.layui-bg-blue {
+				background-color: #393d49 !important;
+			}
+
+			/* 选中项 */
+			.layui-bg-blue .layui-nav-bar,
+			.layui-bg-blue .layui-nav-itemed:after,
+			.layui-bg-blue .layui-this:after {
+				background-color: #ffffff;
+			}
+			
+			.phone{
+				  overflow: auto;
+				      /* overflow-y: hidden; */
+				      height: 812px;
+				      background-color: #fbfbfb;
+				      width: 357px;
+				      border-radius: 5%;
+				      margin-left: 15%;
+				      margin-top: 2%;
+				      margin-bottom: 5%;
+					  box-shadow: 8px 4px 20px 8px #888888;
+					  
+					      border-top-color: rgb(57, 61, 73);
+					      border-top-style: solid;
+					      border-top-width: 30px;
+					      border-right-color: rgb(57, 61, 73);
+					      border-right-style: solid;
+					      border-right-width: 10px;
+					      border-bottom-color: rgb(57, 61, 73);
+					      border-bottom-style: solid;
+					      border-bottom-width: 10px;
+					      border-left-color: rgb(57, 61, 73);
+					      border-left-style: solid;
+					      border-left-width: 10px;
+					      border-image-source: initial;
+					      border-image-slice: initial;
+					      border-image-width: initial;
+					      border-image-outset: initial;
+					      border-image-repeat: initial;
+			}
+			
+			/*修改滚动条样式*/
+			div::-webkit-scrollbar{
+			  width:1px;
+			  height:10px;
+			}
+			div::-webkit-scrollbar-track{
+			  background: rgb(239, 239, 239);
+			  border-radius:1px;
+			}
+			div::-webkit-scrollbar-thumb{
+			  background: #bfbfbf;
+			  border-radius:10px;
+			}
+			div::-webkit-scrollbar-thumb:hover{
+			  background: #333;
+			}
+			div::-webkit-scrollbar-corner{
+			  background: #179a16;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<ul class="layui-nav layui-bg-blue">
+				<li class="layui-nav-item">
+					<img data-v-9972fca0="" style="width: 50px;" src="https://img2.ch999img.com/newstatic/1382/e47e5c4f518af7.png">
+				</li>
+
+				<li class="layui-nav-item"><a href="">九机主站产品</a></li>
+				<li class="layui-nav-item layui-this"><a href="">图片规范</a></li>
+				<li class="layui-nav-item"><a href="">工作流程</a></li>
+				<li class="layui-nav-item">
+					<a href="javascript:;">需求管理</a>
+					<dl class="layui-nav-child">
+						<dd><a href="">需求搜集及评估</a></dd>
+						<dd><a href="">需求方案设计</a></dd>
+						<dd><a href="">设计评审及排期确认</a></dd>
+						<dd><a href="">需求跟进</a></dd>
+						<dd><a href="">需求验收</a></dd>
+						<dd><a href="">需求review</a></dd>
+					</dl>
+				</li>
+				<li class="layui-nav-item"><a href="">工作计划</a></li>
+			</ul>
+			<div class="layui-row">
+				<div class="layui-col-xs6 layui-col-sm6 layui-col-md6">
+					<table class="layui-table" lay-skin="line" lay-size="lg">
+						<colgroup>
+							<col width="150">
+							<col width="750">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>值</th>
+								<th>说明</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr v-for="site in sites">
+								<td>{{ site.name }}</td>
+								<td>{{ site.dsc }}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="layui-col-xs6 layui-col-sm6 layui-col-md6">
+					<div class="phone">
+						<div v-for="site in sites">
+							<h3> {{ site.name }}</h3>
+							<img :src="site.img" />
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<script>
+			new Vue({
+				el: '#app',
+				data: {
+					message: 'Hello Vue.js!',
+					sites: [{
+							name:'完全缩放',
+							dsc: '缩放模式，不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素',
+							img: 'img/imgNorms/裁剪中间.png',
+						},
+						{
+							name: '等比缩放',
+							dsc: '缩放模式，保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来',
+							img: 'img/imgNorms/等比缩放.png',
+						},
+
+
+						{
+							name: '等比缩放裁剪',
+							dsc: '缩放模式，保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。',
+							img: 'img/imgNorms/等比裁剪.png',
+						},
+						{
+							name: '宽自适应',
+							dsc: '缩放模式，宽度不变，高度自动变化，保持原图宽高比不变',
+							img: '',
+						},
+						{
+							name: '高自适应',
+							dsc: '缩放模式，高度不变，宽度自动变化，保持原图宽高比不变',
+							img: '',
+						},
+						{
+							name: '裁剪顶部',
+							dsc: '裁剪模式，不缩放图片，只显示图片的顶部区域',
+							img: 'img/imgNorms/顶部裁剪.png',
+						},
+						{
+							name: '裁剪底部',
+							dsc: '裁剪模式，不缩放图片，只显示图片的底部区域',
+							img: 'img/imgNorms/底部裁剪.png',
+						},
+						{
+							name: '裁剪中间',
+							dsc: '裁剪模式，不缩放图片，只显示图片的中间区域	',
+							img: 'img/imgNorms/裁剪中间.png',
+						},
+						{
+							name: '裁剪左边',
+							dsc: '裁剪模式，不缩放图片，只显示图片的左边区域	',
+							img: 'img/imgNorms/左裁剪.png',
+						},
+
+						{
+							name: '裁剪右边',
+							dsc: '裁剪模式，不缩放图片，只显示图片的右边区域',
+							img: 'img/imgNorms/右裁剪.png',
+						},
+						{
+							name: '裁剪左上',
+							dsc: '裁剪模式，不缩放图片，只显示图片的左上边区域',
+							img: 'img/imgNorms/左上裁剪.png',
+						},
+						{
+							name: '裁剪右上',
+							dsc: '裁剪模式，不缩放图片，只显示图片的右上边区域',
+							img: 'img/imgNorms/右上裁剪.png',
+						},
+						{
+							name: '裁剪左下',
+							dsc: '裁剪模式，不缩放图片，只显示图片的左下边区域',
+							img: 'img/imgNorms/左下裁剪.png',
+						},
+						{
+							name: '裁剪右下',
+							dsc: '裁剪模式，不缩放图片，只显示图片的右下边区域',
+							img: 'img/imgNorms/右下裁剪.png',
+						},
+					]
+				}
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>九机产品网</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="lib/layui-v2.5.6/layui-v2.5.6/layui/css/layui.css" media="all">
+		<!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+		<style>
+			h2 {
+				text-align: center;
+			}
+
+			.layui-timeline-axis {
+				background-color: #1e9fff;
+				color: rgb(255, 255, 255);
+			}
+		</style>
+	</head>
+	<body>
+
+		<ul class="layui-nav layui-bg-blue">
+			<li class="layui-nav-item"><a href="">九机产品</a></li>
+			<li class="layui-nav-item layui-this"><a href="">对接流程</a></li>
+			<li class="layui-nav-item"><a href="">工作流程</a></li>
+			<li class="layui-nav-item">
+				<a href="javascript:;">需求管理</a>
+				<dl class="layui-nav-child">
+					<dd><a href="">需求搜集及评估</a></dd>
+					<dd><a href="">需求方案设计</a></dd>
+					<dd><a href="">设计评审及排期确认</a></dd>
+					<dd><a href="">需求跟进</a></dd>
+					<dd><a href="">需求验收</a></dd>
+					<dd><a href="">需求review</a></dd>
+				</dl>
+			</li>
+			<li class="layui-nav-item"><a href="">工作计划</a></li>
+		</ul>
+		<div class="layui-row">
+			<div class="layui-col-xs4 layui-col-sm4 layui-col-md4" style="margin-top: 10px;">
+				<h2>A类需求</h1>
+					<ul class="layui-timeline">
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<h3 class="layui-timeline-title">需求对接</h3>
+
+								<ul>
+									<li>需求对接后生成初版需求/草稿需求</li>
+									<li>将初版需求抄送产品主管</li>
+								</ul>
+							</div>
+						</li>
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<h3 class="layui-timeline-title">指派工单</h3>
+
+							</div>
+						</li>
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<h3 class="layui-timeline-title">组织讨论</h3>
+								<ul>
+									<li>发起人：由产品和测试组织会议</li>
+									<li>参与人：指派工单中涉及的开发人员，产品，测试</li>
+									<li>讨论对象：需求草稿</li>
+								</ul>
+							</div>
+						</li>
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<h3 class="layui-timeline-title">完善需求文档</h3>
+								<ul>
+									<li>产品经理：需求文档</li>
+									<li>UI/产品经理：UI设计稿</li>
+									<li>开发人员：评估功能关键实现，估算时间</li>
+								</ul>
+							</div>
+						</li>
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<h3 class="layui-timeline-title">再次讨论</h3>
+								<ul>
+									<li>发起人：由产品和测试组织会议</li>
+									<li>参与人：指派工单中涉及的开发人员，产品，测试</li>
+									<li>讨论对象：ui稿、完善后的需求文档、调研后的功能实现情况</li>
+								</ul>
+							</div>
+						</li>
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<h3 class="layui-timeline-title">发布计划</h3>
+								<ul>
+									<li>发起人：由产品和测试组织会议</li>
+									<li>参与人：指派工单中涉及的开发人员，产品，测试</li>
+									<li>讨论对象：ui稿、完善后的需求文档、调研后的功能实现情况</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+			</div>
+
+			<!-- b类需求 -->
+			<div class="layui-col-xs4 layui-col-sm4 layui-col-md4" style="margin-top: 10px;">
+				<h2>B类需求</h1>
+					<ul class="layui-timeline">
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<h3 class="layui-timeline-title">需求对接</h3>
+								<p>
+									形成初版需求/草稿需求
+								</p>
+							</div>
+						</li>
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<h3 class="layui-timeline-title">指派工单</h3>
+							</div>
+						</li>
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<h3 class="layui-timeline-title">发起对接</h3>
+								<p>
+									测试和产品发起对接
+								</p>
+							</div>
+						</li>
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<h3 class="layui-timeline-title">完善需求文档</h3>
+								<ul>
+									<li>产品经理：需求文档</li>
+									<li>UI/产品经理：UI设计稿</li>
+									<li>开发人员：评估功能关键实现，估算时间</li>
+								</ul>
+							</div>
+						</li>
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<h3 class="layui-timeline-title">计划发布</h3>
+								<p>加入到app发版计划，主站功能发布计划，测试计划</p>
+							</div>
+						</li>
+
+					</ul>
+			</div>
+
+
+
+
+			<!-- c类需求 -->
+			<div class="layui-col-xs4 layui-col-sm4 layui-col-md4" style="margin-top: 10px;">
+				<h2>C类需求</h1>
+					<ul class="layui-timeline">
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<h3 class="layui-timeline-title">需求对接</h3>
+								<p>
+									形成初版需求/草稿需求
+								</p>
+							</div>
+						</li>
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<h3 class="layui-timeline-title">任务通知</h3>
+					              <p>通知各小组负责人分配任务</p>
+							</div>
+						</li>
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<h3 class="layui-timeline-title">测试通知</h3>
+								<p>
+									通知负责功能模块的测试要知晓改动
+								</p>
+							</div>
+						</li>
+					<li class="layui-timeline-item">
+						<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+						<div class="layui-timeline-content layui-text">
+							<h3 class="layui-timeline-title">计划发布</h3>
+							<p>
+								列入app发版计划，测试计划
+							</p>
+						</div>
+					</li>
+					</ul>
+			</div>
+
+
+
+
+
+
+		</div>
+
+
+
+		<script src="lib/layui-v2.5.6/layui-v2.5.6/layui/layui.all.js" charset="utf-8"></script>
+		<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+		<script>
+			layui.use('element', function() {
+				var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+
+				//监听导航点击
+				element.on('nav(demo)', function(elem) {
+					//console.log(elem)
+					layer.msg(elem.text());
+				});
+			});
+		</script>
+
+	</body>
+</html>
